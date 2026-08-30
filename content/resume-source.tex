@@ -1,0 +1,169 @@
+\documentclass[a4paper]{article}
+
+
+\usepackage{xcolor}
+\usepackage[scaled]{helvet}
+\usepackage{comment}
+\usepackage{enumitem}
+\usepackage{graphicx}
+\usepackage{wrapfig}
+\usepackage{fancyhdr}
+\usepackage{hyperref}
+\usepackage{geometry}
+
+%document format variables
+\setlength{\parindent}{0pt}
+\renewcommand{\rmdefault}{phv}
+\definecolor{MyBlue}{RGB}{37,87,167}
+\definecolor{MyGray}{RGB}{71,71,71}
+\hypersetup{
+    colorlinks=true,
+    urlcolor=MyBlue, 
+}
+
+% Set page size and margins using geometry
+\geometry{
+  top=20mm,         % Top margin
+  bottom=15mm,      % Bottom margin
+  left=12.7mm,        % Left margin
+  right=12.7mm,       % Right margin
+  headheight=25pt, % Height of the header
+  headsep=15pt,    % Space between header and text
+  footskip=20pt    % Space between text and footer
+}
+
+%header and footer
+\pagestyle{fancy}
+\chead{\textcolor{MyGray}{
+    \small Francois Bazire - Amsterdam, NL\\[-0.5ex]
+    \small International Operations 
+    \textbar Partnerships}}
+\renewcommand{\headrulewidth}{0pt} 
+
+\cfoot{
+    \href{mailto:francoismbazire@pm.me}{\textcolor{MyBlue}{francoismbazire@pm.me}} 
+    \textbar \textcolor{black}{+31 6 25527381} % Keep phone number neutral
+    \textbar \href{https://www.linkedin.com/in/francoisbazire/}{\textcolor{MyBlue}{LinkedIn}}
+}
+
+
+
+
+%recurring formatting variables
+\newcommand{\Name}[1]{\textcolor{MyBlue}{\textbf{\LARGE{#1}}}\\[-1ex]\textcolor{MyBlue}{\rule{\linewidth}{0.5mm}}\\}
+\newcommand{\MainTitle}[1]{\textbf{\Large{#1}}\\[-1ex] \rule{\linewidth}{0.5mm}\\}
+\newcommand{\JobTitle}[3]{\textbf{\color{MyBlue}\MakeUppercase{#1}\small{\hfill \textbf{#2} \textbar  \textbf{#3}}}\\}
+\newcommand{\JobTitleSmall}[3]{{\footnotesize \textbf{\color{MyBlue}\MakeUppercase{#1}\hfill \textbf{#2} \textbar  \textbf{#3}}}\\}
+\newcommand{\Company}[1]{\textbf{#1} \\}
+\newcommand{\ListTasks}[1]{
+  \begin{itemize}[left=0pt]
+    \vspace{-1ex}  
+    \renewcommand{\labelitemi}{\textcolor{blue}{--}}
+    \setlength{\itemsep}{-1ex}
+    #1
+  \end{itemize}
+}
+
+
+%%template job experience
+\begin{comment}
+\JobTitle{Head of International Operations}{Amsterdam, NL}{March 24 - March 25}
+\Company{HireArt, Inc.}
+Leading International Operations including: 
+\ListTasks{
+    \item 
+    \item 
+    \item 
+}
+\end{comment}
+
+%START OF CV DOCUMENT: 
+\begin{document}
+
+\begin{minipage}{0.10\textwidth}
+    \includegraphics[width=\linewidth]{fb-1-29.jpg}
+\end{minipage}
+\hspace{1em} % Adjust spacing between image and text
+\begin{minipage}{0.85\textwidth}
+    \Name{Francois Bazire}
+Multicultural operations and partnerships leader with 10+ years in international business. Scaled service delivery to support 7x revenue growth, launched international operations generating USD 4 million in annualized revenue. Successfully scaled a global team through high growth, capital raises, and post merger and acquisition integrations. 
+\\Experienced cross-cultural negotiator in Defense and SaaS industries. Spreadsheet magician and international expansion expert at \href{https://wwww.mbiconsulting.co}{MBI Consulting}.
+\end{minipage}
+
+\vspace{3ex}
+\MainTitle{Professional Experience}
+
+\JobTitle{International Expansion Consultant}{Amsterdam, NL}{Feb. 24}
+\Company{MB International Consulting | self-employed}
+Guiding clients to confidently grow revenue and increase customer satisfaction around the globe. Specialized in building compliant international workforces, go-to-market planning, fractional operations leadership, and international partnerships.\\
+}
+
+\JobTitle{Head of International Operations}{Amsterdam, NL}{March 24 - March 25}
+\Company{HireArt, Inc. | B2B SaaS - Series B (USD 30m)}
+Designed Target Operating Model and pricing for HireArt's international solutions. Implemented service delivery in 100+ countries generating USD 4 million annualized revenue. Scaled two core business lines internationally and created a third business line to develop new revenue. Owned legal compliance, profitability, and product strategy for the business unit.
+\ListTasks{
+    \item Turned international payments from a 3\% cost into 2.5\% revenue and cut transaction times from 2 days to hours, improving customer satisfaction.
+    \item Advised revenue teams to close international deals amounting to USD 1m in Annual Recurring Revenue  
+    \item Designed, built, and coded an automated, country-specific dashboard to price solutions and model costs in 100+ countries.
+}
+
+\JobTitle{Entrepreneur in Residence}{Amsterdam, NL}{May 23 - July 23}
+\Company{Antler | Venture Capital (USD 600m AUM)}
+Built the business plan for Alys, a technology combining Conversational AI and Natural Language Processing methods to monitor the progression of Alzheimer's Disease and empower caregivers to plan their emotional and financial resources. Conducted customer validation and expert interviews to finetune product-market fit and go-to-market strategy, crafted funding pitches, and assembled a board of three medical and business advisors. 
+\\
+
+\JobTitle{Director, Operational Partnerships - Global}{Amsterdam, NL | Mexico City, MX}{June 21 - May 23}
+\JobTitleSmall{Manager, Operational Partnerships - EMEA}{Amsterdam, NL}{October 20 - June 21}
+\JobTitleSmall{Associate, Operational Partnerships - EMEA}{Amsterdam, NL}{October 19 - October 20}\Company{Velocity Global | B2B SaaS - Self funded → Series B (USD 500m) }
+Early employee (#100), promoted through 3 roles as the company scaled to 1000+ staff worldwide. Set the direction for a global ecosystem of 225+ partners in 185 countries to meet corporate goals of geographical service delivery and operational excellence. Implemented the Objective and Key Result (OKR) methodology to empower a team of 8 professionals to optimize partner performance and support 100\% Year-over-year (YoY) growth.
+\ListTasks{    
+    \item Integrated 2 global partner networks post-acquisition, standardizing processes and contracts for 100\% of partners, reducing redundancies by 75\%, and cutting partner costs 50\% in one year, enhancing efficiency and satisfaction.
+    \item Cut partner process lead time by 30\% while doubling monthly transactions YoY, driving company-wide efficiencies and customer satisfaction.  Improved metrics, process alignment, team and partner incentives.
+    \item Sourced key partners to service the implementation of 40 legal entities worldwide.
+    \item Increased service delivery in 50+ countries by identifying, negotiating, and onboarding new in-country partners.
+    \item Awarded 2021 Velocity Global EMEA Values Award for Velocity, Integrity, Professionalism, Empowerment, Service.
+}
+
+\\
+\JobTitle{Project Manager, Feasibility Study}{Dubai, UAE}{February 18 - February 19}
+\Company{Airolife | Aerospace - pre-seed}
+Conceptualized, redacted, and delivered the business plan for a \$100m commercial aircraft recycling project and Used Serviceable Material trading unit. Deliverables included the financial model, commercial, industrial, and innovation strategies with the objective of securing funding from an Emirati sovereign wealth fund and one of the largest private investors in the UAE. 
+\\
+
+\JobTitle{Business Development Manager - GCC}{Dubai, UAE}{January 16 - January 18}
+\Company{Naval Group | Defense - publicly listed}
+Engaged client Navy officials through client visits, memos, and company representation initiatives (defense expos), to facilitate naval defense bids and contract wins ranging from \$500 million to \$1.5 billion.
+\ListTasks{
+    \item Cultivated relationships with French economic and military attachés in Kuwait, Oman, UAE to facilitate 5-to-10-year-horizon business growth initiatives with client navy officials.
+    \item Augmented France-based Naval Group's Legal, Finance, Commercial, and Technical teams throughout contract negotiations (including pre-sales and after-sales activities) on a \$1 billion contract win with the UAE Navy.
+    \item Prospected the interest of corporate executives and government officials for multi-million Renewable Marine Energy projects by leading an exploration mission in Oman, resulting in the launch of a business case at Naval Group HQ.
+}
+
+\JobTitle{Junior Project Manager}{Paris, France}{February 14 - July 14}
+\Company{Total Exploration \& Production | Oil and Gas - publicly listed}
+Updated Total's Standard Operating Procedures with an audit tool to increase contracts and procurement efficiency for 217 Total affiliates
+\\
+
+\JobTitle{Junior Key Account Manager}{Detroit, MI}{July 13 - December 13}
+\Company{Michelin, USA | Automotive - publicly listed}
+Analyzed over 3 000 lines of sales data as part of the drafting of the 2014 sales plan, and presented key optimization figures to Michelin C-suite executives auditing the Detroit branch.
+\\
+
+\MainTitle{Core Competencies}
+Leadership \& Team Management, Operational Excellence, Business Strategy \& Expansion, Cross-Functional Communication, Data Analytics, Entrepreneurship, Crisis Management, Strategic Partnerships, Contract Negotiation, Relationship-Building, Relationship Management, Cross-Cultural Management, Scalability
+\\
+
+\MainTitle{Technical Skills}
+\textbf{Programming Languages:}Python (Basic),  Google Scripts (Proficient),VBA (Proficient), SQL (Basic), HTML/Latex (Basic)
+\\*
+\textbf{Languagues:} English (Native), French (Native), Spanish (Fluent)
+\\
+
+\MainTitle{Education, Certifications, Beyond Work}
+\textbf{MSc in Management -} electives in Geopolitics and International Finance, Grenoble Ecole de Management, France (2015)
+\\*
+\textbf{Computer Science - }CS50, HarvardX (2019 - uncertified) | CS50AI, HarvardX (2024 - uncertified)
+\\*
+New Space Economy, EPFLx (2025 - uncertified) 
+\\*
+\end{document}

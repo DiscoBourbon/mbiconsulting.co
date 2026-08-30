@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MB International Consulting</title>
+    <meta property="og:image" content="assets/MBI banner.png">
+    <link rel="icon" type="image/png" href="assets/MBI logo.png">
+    <link rel="apple-touch-icon" href="assets/MBI logo.png">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-color: #000;
+            --secondary-color: #666;
+            --light-color: #f8f8f8;
+            --border-color: #e0e0e0;
+            --accent-color: #2563eb;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--primary-color);
+            background: #fff;
+        }
+
+
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            padding: 40px 40px 80px;
+            background: #000;
+            overflow: hidden;
+            min-height: 450px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            gap: 40px;
+        }
+
+        .hero-header {
+            position: relative;
+            z-index: 2;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .hero-header-logo img {
+            height: 50px;
+            width: auto;
+            display: block;
+        }
+
+        .hero-header-text {
+            font-size: 18px;
+            font-weight: 600;
+            color: #fff;
+            letter-spacing: 0.3px;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.4);
+            z-index: 1;
+        }
+
+        .hero video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: 0;
+        }
+
+        .hero-logo {
+            position: absolute;
+            top: 30px;
+            left: 40px;
+            z-index: 10;
+            display: none;
+        }
+
+        .hero-logo img {
+            height: 70px;
+            width: auto;
+            display: block;
+        }
+
+        .hero-wave {
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 100%;
+            height: 100px;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+            color: #fff;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 24px;
+            letter-spacing: -0.5px;
+            color: #fff;
+        }
+
+        .hero-tagline {
+            font-size: 18px;
+            color: rgba(255, 255, 255, 0.9);
+            line-height: 1.8;
+            margin-bottom: 0;
+        }
+
+        /* Expertise Section */
+        .expertise {
+            padding: 80px 40px;
+            background: #fff;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .expertise-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 40px;
+            margin-top: 40px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .expertise h2 {
+            text-align: left;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .expertise-item {
+            display: flex;
+            gap: 16px;
+            align-items: flex-start;
+        }
+
+        .expertise-icon {
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+
+        .expertise-icon img {
+            height: 90px;
+            width: 90px;
+            object-fit: cover;
+            border-radius: 6px;
+            display: block;
+        }
+
+        .expertise-content {
+            flex: 1;
+            max-width: 180px;
+        }
+
+        .expertise-item h3 {
+            font-size: 16px;
+            font-weight: 700;
+            margin-bottom: 8px;
+            line-height: 1.3;
+        }
+
+        .expertise-item p {
+            font-size: 13px;
+            color: var(--secondary-color);
+            line-height: 1.6;
+        }
+
+        /* Bio Section */
+        .bio {
+            padding: 80px 40px;
+            background: var(--light-color);
+        }
+
+        .bio-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 40px;
+            display: grid;
+            grid-template-columns: 350px 1fr;
+            gap: 60px;
+            align-items: flex-start;
+        }
+
+        .bio-title {
+            text-align: center;
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 24px;
+        }
+
+        .bio-text {
+            font-size: 15px;
+            line-height: 1.6;
+            color: var(--primary-color);
+        }
+
+        .bio-text p {
+            margin-bottom: 14px;
+        }
+
+        .bio-text p:last-child {
+            margin-bottom: 0;
+        }
+
+        .bio-photo {
+            position: sticky;
+            top: 40px;
+        }
+
+        .bio-photo img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            display: block;
+            background: #ddd;
+        }
+
+        /* Contact Section */
+        .contact {
+            padding: 80px 40px;
+            background: #fff;
+            text-align: center;
+        }
+
+        .contact-container {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .contact-text {
+            font-size: 16px;
+            line-height: 1.8;
+            color: var(--primary-color);
+            margin-bottom: 32px;
+        }
+
+        .contact-links {
+            display: flex;
+            gap: 24px;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .contact-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: opacity 0.3s ease;
+        }
+
+        .contact-links a:hover {
+            opacity: 0.7;
+        }
+
+        .contact-links img {
+            height: 64px;
+            width: 64px;
+            display: block;
+        }
+
+        .contact-links svg {
+            height: 48px;
+            width: 48px;
+            display: block;
+        }
+
+        /* Banner Section */
+        .banner {
+            padding: 60px 40px 40px;
+            text-align: center;
+            background: #fff;
+        }
+
+        .banner img {
+            max-width: 400px;
+            width: 100%;
+            height: auto;
+            display: inline-block;
+        }
+
+        /* Footer */
+        footer {
+            border-top: 1px solid #e0e0e0;
+            background: #fff;
+            padding: 60px 40px;
+        }
+
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 40px;
+            align-items: flex-start;
+        }
+
+        .footer-col {
+            text-align: center;
+            font-size: 13px;
+            color: #666;
+        }
+
+        .footer-col p {
+            margin: 0 0 12px 0;
+        }
+
+        .footer-col p:last-child {
+            margin-bottom: 0;
+        }
+
+        .footer-col-company {
+            font-size: 16px;
+            color: #000;
+            margin-bottom: 8px;
+        }
+
+        .footer-col a {
+            color: #2563eb;
+            text-decoration: none;
+        }
+
+        .footer-col a:hover {
+            text-decoration: underline;
+        }
+
+        .footer-col img {
+            max-width: 200px;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+
+        @media (max-width: 768px) {
+            .footer-container {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero {
+                padding: 60px 20px 40px;
+            }
+
+            .hero h1 {
+                font-size: 32px;
+            }
+
+            .hero-tagline {
+                font-size: 16px;
+            }
+
+            .expertise {
+                padding: 60px 20px;
+            }
+
+            .expertise-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+
+            .bio {
+                padding: 60px 20px;
+            }
+
+            .bio-container {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .bio-photo {
+                position: static;
+            }
+
+            .contact {
+                padding: 60px 20px;
+            }
+        }
+
+        /* Section dividers */
+        section {
+            border-top: 1px solid var(--border-color);
+        }
+
+        section:first-of-type {
+            border-top: none;
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero">
+        <video autoplay muted loop playsinline>
+            <source src="assets/waves_orange.webm" type="video/webm">
+        </video>
+
+        <div class="hero-header">
+            <div class="hero-header-logo">
+                <img src="assets/MBI logo.png" alt="MBI Consulting">
+            </div>
+            <div class="hero-header-text">MB International Consulting</div>
+        </div>
+
+        <div class="hero-content">
+            <h1>From strategy to global scale.</h1>
+            <p class="hero-tagline">I build international expansion for companies solving complex problems, bridging go-to-market strategy, partnerships, and operations across borders.</p>
+        </div>
+    </section>
+
+    <!-- What I Do -->
+    <section class="expertise">
+        <h2 style="font-size: 24px; margin-bottom: 8px;">What I Do</h2>
+        <div class="expertise-grid">
+            <div class="expertise-item">
+                <div class="expertise-icon">
+                    <img src="assets/global-partnership-handshake.jpg" alt="Partnerships">
+                </div>
+                <div class="expertise-content">
+                    <h3>Partnerships & Ecosystem Building</h3>
+                    <p>Building strategic partnerships and scaling partner ecosystems across borders.</p>
+                </div>
+            </div>
+            <div class="expertise-item">
+                <div class="expertise-icon">
+                    <img src="assets/LOTR Map.jpg" alt="Market Entry">
+                </div>
+                <div class="expertise-content">
+                    <h3>International Market Entry & Business Development</h3>
+                    <p>Go-to-market planning and execution, from closing first deals to scaling service delivery.</p>
+                </div>
+            </div>
+            <div class="expertise-item">
+                <div class="expertise-icon">
+                    <img src="assets/business-meeting.jpg" alt="Post-Merger Integration">
+                </div>
+                <div class="expertise-content">
+                    <h3>Post-Merger Integration Leadership</h3>
+                    <p>Aligning teams, systems, and partner networks after acquisitions. Unifying fragmented structures into efficient operations.</p>
+                </div>
+            </div>
+            <div class="expertise-item">
+                <div class="expertise-icon">
+                    <img src="assets/global-hiring-pin.jpg" alt="Global Operations">
+                </div>
+                <div class="expertise-content">
+                    <h3>Global Operations & Workforce Management</h3>
+                    <p>Entity setup, EOR, contractor management, and compliance across international markets.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bio Section -->
+    <section class="bio">
+        <div class="bio-container">
+            <div class="bio-photo">
+                <img src="assets/francois-photo.jpg" alt="François Bazire">
+            </div>
+            <div class="bio-text">
+                <h2 class="bio-title">François Bazire</h2>
+                <p>Growing up across France, Australia, and Canada gave me a taste for being a Frenchman abroad. After several years in Dubai and having called Detroit, Mexico, Spain, and Brazil home, I settled in the Netherlands in 2019.</p>
+
+                <p>These experiences fueled my drive to connect people and ideas across cultures, and build the trust needed to make things happen internationally.</p>
+
+                <p>International growth has been my guiding star throughout my career: bridging commercial strategy and operations, from shaping expansion strategies with founders and getting the first deals across the finish line, to building the teams and systems needed to scale service delivery.</p>
+
+                <p>Whether driving business development initiatives for complex systems in Europe and the Middle East, or building a network of 200+ partners across 185 countries, I've worked at the intersection of commercial opportunity and operational execution.</p>
+
+                <p>I combine a deep understanding of defence technology with experience in high-growth environments, having navigated capital raises, post-merger integrations, and rapid organisational growth.</p>
+
+                <p>Today, my focus is on taking cutting-edge drone technology to market and contributing to a stronger Europe through better interoperability of unmanned systems.</p>
+
+                <p>Alongside my operating roles, I've kept a foot in entrepreneurial territory through MBI Consulting, advising ventures on international growth and developing business plans for science-based projects spanning health tech, machine learning, and aerospace.</p>
+
+                <p>I'm particularly drawn to companies at the intersection of technology, geopolitics, and industrial ambition, particularly those contributing to a stronger and more sovereign Europe.</p>
+
+                <p>Name a country, and I've likely negotiated there, resolved a dispute, or celebrated a partner's success.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact">
+        <div class="contact-container">
+            <div class="contact-text">
+                <p>Curiosity didn't kill the cat. It took me to more than a few countries.</p>
+                <p>If you're working on international growth, go-to-market, partnerships, or scaling across borders, let's connect.</p>
+            </div>
+            <div class="contact-links">
+                <a href="https://www.linkedin.com/in/francoisbazire/" aria-label="LinkedIn">
+                    <img src="assets/Linkedin_logo.webp" alt="LinkedIn">
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <!-- Column 1: Logo -->
+            <div class="footer-col">
+                <img src="assets/MBI banner.png" alt="MBI Consulting">
+            </div>
+
+            <!-- Column 2: Company Name & Email -->
+            <div class="footer-col">
+                <p class="footer-col-company">MB International Consulting</p>
+                <p><a href="mailto:info@mbiconsulting.co">info@mbiconsulting.co</a></p>
+            </div>
+
+            <!-- Column 3: Registration & Location -->
+            <div class="footer-col">
+                <p>KVK number: 93044925</p>
+                <p>BTW number: NL004994266B24</p>
+                <p>Amsterdam, Netherlands</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
